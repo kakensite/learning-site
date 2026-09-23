@@ -336,6 +336,14 @@ button{
     max-height:500px;
 
 }
+	
+.explanationImage {
+    width: 90%;
+    max-width: 650px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
 
 
 /* 動画 */
@@ -1132,8 +1140,11 @@ const data = {
 
                             type:"image",
 
-                            src:
-                            "img/shopping_cart_woman.png"
+                            src:[
+                            "img/shopping_cart_woman.png",
+							"img/buranko_boy_sad.png"
+							]
+							
                         },
 
                         {
@@ -2099,25 +2110,20 @@ function openExplanation(explanation){
         "explanationModal"
     );
 
-
     const title =
     document.getElementById(
         "modalTitle"
     );
-
 
     const content =
     document.getElementById(
         "modalContent"
     );
 
-
     title.innerText =
     explanation.title;
 
-
     content.innerHTML = "";
-
 
     if(explanation.type === "text"){
 
@@ -2126,18 +2132,23 @@ function openExplanation(explanation){
 
     }
 
-
     else if(explanation.type === "image"){
 
+        // 画像が1枚でも複数枚でも対応
+        const images =
+        Array.isArray(explanation.src)
+        ? explanation.src
+        : [explanation.src];
+
         content.innerHTML =
-        `
-        <img
-            src="${explanation.src}"
-            alt="解説画像">
-        `;
+        images.map(src => `
+            <img
+                src="${src}"
+                alt="解説画像"
+                class="explanationImage">
+        `).join("");
 
     }
-
 
     else if(explanation.type === "video"){
 
@@ -2150,7 +2161,6 @@ function openExplanation(explanation){
         `;
 
     }
-
 
     modal.classList.remove("hidden");
 
