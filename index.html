@@ -1127,8 +1127,9 @@ const data = {
                             type:"text",
 
                             content:
-                            "掛け算は足し算をまとめたものである。<br><br>" +
-                            "例題の5*2は5を二個足したものと考えれるそこに3を足したのが答えとなる。"
+                            "かけ算はたし算をまとめたものである。<br><br>" +
+                            "れいだいの5×2は5を2コたしたものとかんがえれる。<br><br>" +
+							"そこに3を足したのが答えとなる。"
 
                         },
 
@@ -1138,10 +1139,8 @@ const data = {
 
                             type:"image",
 
-                            src:[
-                            "img/shopping_cart_woman.png",
-							"img/buranko_boy_sad.png"
-							]
+                            src:
+                            "img/小掛け算.png"
 							
                         },
 
@@ -1162,7 +1161,7 @@ const data = {
 
                 {
 
-                    question:"2 + 3 はいくつ？",
+                    question:"６×（３＋４）",
 
                     answer:"5",
 
@@ -1175,8 +1174,8 @@ const data = {
                             type:"text",
 
                             content:
-                            "2個のものに3個を足すと、全部で5個になります。<br><br>" +
-                            "2 + 3 = 5 です。"
+                            "()はかけ算と同じくひとまとまりでかんがえるもの。<br><br>" +
+							"よって6*(3+4)では3+4をやって、<br>そのけっかに6をかけたものが答えとなる。"
 
                         },
 
@@ -1187,7 +1186,7 @@ const data = {
                             type:"image",
 
                             src:
-                            "https://via.placeholder.com/600x350?text=2%2B3%3D5"
+                            "img/小かっこ.png"
 
                         },
 
@@ -1198,54 +1197,7 @@ const data = {
                             type:"video",
 
                             src:
-                            "https://www.youtube.com/embed/dQw4w9WgXcQ"
-
-                        }
-
-                    ]
-
-                },
-
-
-                {
-
-                    question:"5 + 4 はいくつ？",
-
-                    answer:"9",
-
-                    explanation:[
-
-                        {
-
-                            title:"文章",
-
-                            type:"text",
-
-                            content:
-                            "5に4を足すと9になります。<br><br>" +
-                            "5 + 4 = 9 です。"
-
-                        },
-
-                        {
-
-                            title:"画像",
-
-                            type:"image",
-
-                            src:
-                            "https://via.placeholder.com/600x350?text=5%2B4%3D9"
-
-                        },
-
-                        {
-
-                            title:"動画",
-
-                            type:"video",
-
-                            src:
-                            "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            "https://www.youtube.com/embed/8czq3aVsjsA?si=TbHjKctNKiV2lwau"
 
                         }
 
@@ -1260,37 +1212,16 @@ const data = {
 
                 {
 
-                    question:"6 + 7 = ?",
+                    question:"88-（17+6）× 3",
 
-                    answer:"13",
-
-                    explanation:
-                    "6に7を足すと13になります。"
-
-                },
-
-                {
-
-                    question:"8 + 5 = ?",
-
-                    answer:"13",
+                    answer:"19",
 
                     explanation:
-                    "8に5を足すと13になります。"
-
-                },
-
-                {
-
-                    question:"9 + 6 = ?",
-
-                    answer:"15",
-
-                    explanation:
-                    "9に6を足すと15になります。"
+                    "17+6をして23。<br>23×3をして69。<br>88-69で答えは19。"
 
                 }
 
+               
             ]
 
         },
@@ -1298,29 +1229,26 @@ const data = {
 
 		{
 
-            title:"けいさんのじゅんばん",
+            title:"わりあいとのうど",
 
             tutorial:[
 
                 {
 
-                    question:"",
+                    question:"クッキーを何枚か買いました。<br>そのうち 6枚 を友達にあげたところ、残りは 4人で同じ数ずつ分けると1人5枚 になりました。<br>最初にクッキーを何枚買ったでしょうか。<br>□を使って式を作りましょう。",
 
-                    answer:"",
-			
-		    questionImage: "",
+                    answer:"26",
 
                     explanation:[
 
                         {
 
-                            title:"動画",
+                            title:"文章",
 
-                            type:"video",
+                            type:"text",
 
                             content:
-                            "<br><br>" +
-                            ""
+                            "クッキーのまいすうを□とする。<br>そこから6まいをくばった(-6)ことから□-6となった。<br>4人でおなじかずずつ分けると1人5まいとのことから<br>□-6=5*4これをけいさんしたものが答えとなる。"
 
                         },
 
@@ -1331,7 +1259,7 @@ const data = {
                             type:"image",
 
                             src:
-                            "img/shopping_cart_woman.png"
+                            "img/小◇.png"
 							
                         },
 
@@ -1342,7 +1270,7 @@ const data = {
                             type:"video",
 
                             src:
-                            ""
+                            "https://www.youtube.com/embed/M7p_Qm4EnZI?si=uVhWZbLEVbD8skGk"
                         }
 
                     ]
@@ -1352,9 +1280,9 @@ const data = {
 
                 {
 
-                    question:"",
+                    question:"５％のしょくえんすい５７５ｇのしょくえんのりょうは？",
 
-                    answer:"",
+                    answer:"28.75",
 
                     explanation:[
 
@@ -1365,8 +1293,7 @@ const data = {
                             type:"text",
 
                             content:
-                            "br><br>" +
-                            ""
+                            "5%とはひゃくぶんりつであるため0,05倍と表される。<br>よって575×0.05が問いとなる。" 
 
                         },
 
@@ -1377,7 +1304,7 @@ const data = {
                             type:"image",
 
                             src:
-                            ""
+                            "img/小塩.png"
 
                         },
 
@@ -1388,7 +1315,7 @@ const data = {
                             type:"video",
 
                             src:
-                            ""
+                            "https://www.youtube.com/embed/EYgFK6QZZcw?si=RchU9a_RbujORvKY"
 
                         }
 
@@ -1403,19 +1330,247 @@ const data = {
 
                 {
 
-                    question:"",
+                    question:"25％のしょくえん200gと10％のしょくえん300gをまぜ、さらに60gのしおをくわえたときの何％のしょくえんすいになる？",
 
-                    answer:"",
+                    answer:"25",
 
                     explanation:
-                    ""
+                    "① 25％のしょくえんすい200gに入っているしょくえん<br>
+200 × 0.25 ＝ 50g<br><br>
+
+② 10％のしょくえんすい300gに入っているしょくえん<br>
+300 × 0.10 ＝ 30g<br><br>
+
+③ しょくえんのごうけい<br>
+50 ＋ 30 ＋ 60 ＝ 140g<br><br>
+
+④ しょくえんすいぜんたいのおもさ<br>
+200 ＋ 300 ＋ 60 ＝ 560g<br><br>
+
+⑤ しょくえんすいのこさ<br>
+140 ÷ 560 × 100 ＝ 25％<br><br>
+
+答え：25％"
 
                 }
 
             ]
 
-        }
+        },
 
+		{
+
+            title:"ぶんしょうもんだい",
+
+            tutorial:[
+
+                {
+
+                    question:"りんごは1コ120円、みかんは1コ80円です。<br>りんご1コとみかん1コをかうと、へいきんすると1コいくらになりますか？",
+
+                    answer:"100",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "へいきんは「ごうけい/こすう」により200/2でわかる。" 
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/小平均.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/7dsHypF432M?si=fdBOImY77UoB8scm"
+                        }
+
+                    ]
+
+                }       
+
+            ],
+
+
+            real:[
+
+                {
+
+                    question:"ある店では、りんご・みかん・バナナをうっています。<br>
+りんご1コ：120円、みかん1コ：80円、バナナ1本：100円<br>
+太郎くんは、3しゅるい合わせて 20コ 買ったところ、合計きんがくは 2,000円 でした。<br>
+さらに、りんごのこすうは、みかんのこすうの 2倍 でした。<br>
+さて、太郎くんは、りんご・みかん・バナナを何コずつ買ったでしょう？<br><br>
+選択肢&nbsp;１，りんご4個、みかん2個、バナナ14本&nbsp;２，りんご6個、みかん3個、バナナ11本&nbsp;３，りんご0個、みかん0個、バナナ20本&nbsp;４，りんご8個、みかん4個、バナナ8本",
+
+                    answer:"3",
+
+                    explanation:
+                    "① みかんを□個とすると、りんごはその2倍なので2□個です。<br>
+バナナは20－2□－□＝20－3□個です。<br><br>
+② 値段の合計を式にすると、<br>
+120×2□＋80×□＋100×(20－3□)＝2000<br><br>
+③ 計算すると、<br>
+20□＋2000＝2000<br>
+□＝0<br><br>
+したがって、<br>
+りんご0個、みかん0個、バナナ20本です。"
+
+                }
+
+            ]
+
+        },
+	
+		{
+
+            title:"速さのもんだい",
+
+            tutorial:[
+
+                {
+
+                    question:"1200ｍを8分で走ったときの分速は？",
+
+                    answer:"150",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "びょう速はm/s　分速はm/60sと表される。<br>よって1200/8が答えとなる。"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/小速さの公式.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/ksFmToRl-ao?si=_2KCNZkpH28MVQWu"
+                        }
+
+                    ]
+
+                },
+
+
+                {
+
+                    question:"蘇我入鹿君は、毎分５３６m の速さではしっています。<br>安倍晴明くんは、蘇我入鹿くんと向かい合って、毎分 ２９２m の速さで歩いています。<br>二人が近づく速さは？",
+
+                    answer:"828",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "かたほうが止まっているときより向かい合ってすすんだときのほうが出会う時間はとうぜん早い。<br>このことを式にすると536+292となる。<br>これが答えとなる。"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/小向かい会って進む速さ.png"
+
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/lhm_TyhRxqE?si=nm90hlZDrX65DFl9"
+
+                        }
+
+                    ]
+
+                }
+
+            ],
+
+
+            real:[
+
+                {
+
+                    question:"家とえきは、一直線の道で 4,400m はなれています。<br>
+午前8時ちょうどに、太郎くんが家を出発してえきへ向かいました。<br>
+太郎くんの速さは 毎分80m です。太郎くんが出発してから 10分後、次郎くんがえきを出発して家へ向かいました。<br>
+次郎くんの速さは 毎分100m です。2人はとちゅうで出会い、その後も同じ速さで進みました。<br>
+2人が出会ったのは、午前何時何分でしょう？<br><br>
+選択肢&nbsp;１，8時30分&nbsp;２，9時&nbsp;３，8時45分&nbsp;４，9時10分",
+
+                    answer:"1",
+
+                    explanation:
+					"① 太郎くんが10分で進む距離を求めます。<br>
+80 × 10 ＝ 800m<br><br>
+② 2人が出会うまでに進む距離は、<br>
+4,400 − 800 ＝ 3,600m<br><br>
+③ 2人が1分間に近づく距離は、<br>
+80 ＋ 100 ＝ 180m<br><br>
+④ 出会うまでの時間は、<br>
+3,600 ÷ 180 ＝ 20分<br><br>
+8時10分から20分後なので、<br>
+答え：8時30分",
+
+                }
+
+            ]
+
+        },
+					
 		{
 
             title:"",
@@ -1434,12 +1589,11 @@ const data = {
 
                         {
 
-                            title:"動画",
+                            title:"文章",
 
-                            type:"video",
+                            type:"text",
 
                             content:
-                            "<br><br>" +
                             ""
 
                         },
@@ -1451,7 +1605,7 @@ const data = {
                             type:"image",
 
                             src:
-                            "img/shopping_cart_woman.png"
+                            "img/.png"
 							
                         },
 
@@ -1485,7 +1639,6 @@ const data = {
                             type:"text",
 
                             content:
-                            "br><br>" +
                             ""
 
                         },
@@ -1497,7 +1650,7 @@ const data = {
                             type:"image",
 
                             src:
-                            ""
+                            "img/.png"
 
                         },
 
@@ -1528,7 +1681,9 @@ const data = {
                     answer:"",
 
                     explanation:
-                    ""
+
+                    "",
+                    questionImage: ""
 
                 }
 
