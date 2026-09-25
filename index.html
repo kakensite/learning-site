@@ -1420,7 +1420,7 @@ const data = {
 太郎くんは、3しゅるい合わせて 20コ 買ったところ、合計きんがくは 2,000円 でした。<br>
 さらに、りんごのこすうは、みかんのこすうの 2倍 でした。<br>
 さて、太郎くんは、りんご・みかん・バナナを何コずつ買ったでしょう？<br><br>
-選択肢&nbsp;１，りんご4個、みかん2個、バナナ14本&nbsp;２，りんご6個、みかん3個、バナナ11本&nbsp;３，りんご0個、みかん0個、バナナ20本&nbsp;４，りんご8個、みかん4個、バナナ8本`,
+選択肢&nbsp;&nbsp;1,りんご4個、みかん2個、バナナ14本&nbsp;&nbsp;2,りんご6個、みかん3個、バナナ11本&nbsp;&nbsp;3,りんご0個、みかん0個、バナナ20本&nbsp;&nbsp;4,りんご8個、みかん4個、バナナ8本`,
 
                     answer:"3",
 
@@ -1549,7 +1549,7 @@ const data = {
 太郎くんの速さは 毎分80m です。太郎くんが出発してから 10分後、次郎くんがえきを出発して家へ向かいました。<br>
 次郎くんの速さは 毎分100m です。2人はとちゅうで出会い、その後も同じ速さで進みました。<br>
 2人が出会ったのは、午前何時何分でしょう？<br><br>
-選択肢&nbsp;１，8時30分&nbsp;２，9時&nbsp;３，8時45分&nbsp;４，9時10分`,
+選択肢&nbsp;&nbsp;1,8時30分&nbsp;&nbsp;2,9時&nbsp;&nbsp;3,8時45分&nbsp;&nbsp;4,9時10分`,
 
                     answer:"1",
 
@@ -1572,6 +1572,223 @@ const data = {
         },
 					
 		{
+
+            title:"おうぎ形の面積",
+
+            tutorial:[
+
+                {
+
+                    question:"青色の部分の面積は？",
+
+                    answer:"19.625",
+			
+		    questionImage: "img/小学生図形1.png",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "おうぎ形の面積の求め方は「半径×半径×3.14×中心角/360」で求められるため、中心角を代入をして答えとなる。
+"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/小扇１.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/k4nRXg5gvXk?si=tsKlYfR8p4cJL7Ff"
+                        }
+
+                    ]
+
+                },
+
+
+                {
+
+                    question:"青色の部分の面積は？",
+
+                    answer:"3.562",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "(1)-直角二等辺三角形(5*5/2)によって弓状の部分がでる。<br>それを二分の一することにより答えとなる。"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/小扇２.png"
+
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/tx2U9x4Y-YQ?si=0FZYuHR6ewA7X5Y9"
+
+                        }
+
+                    ]
+
+                }
+
+            ],
+
+
+            real:[
+
+                {
+
+                    question:"この図の青色の部分の面積は？",
+
+                    answer:"48",
+
+                    explanation:
+						`正方形の1辺は8cmなので、面積は<br>
+8×8＝64㎠です。<br><br>
+白い部分を3つに分けて考えます。<br><br>
+① 下の白い部分<br>
+半円の面積は<br>
+4×4×3.14÷2＝25.12㎠<br>
+三角形の面積は<br>
+8×4÷2＝16㎠<br>
+なので、<br>
+(25.12－16)÷2＝4.56㎠<br><br>
+② 真ん中の白い部分<br>
+正方形の半分から4分の1円を引くと、<br>
+64÷2－8×8×3.14÷4＝－18.24<br>
+となるため、ここは図の関係から<br>
+(64－50.24)÷2＝6.88㎠<br><br>
+③ 反対側の白い部分も4.56㎠です。<br><br>
+白い部分の合計は<br>
+4.56＋6.88＋4.56＝16㎠<br><br>
+したがって、緑色の部分は<br>
+64－16＝48㎠<br><br>
+答え：48㎠`,
+                    questionImage: "img/小学生図形.png"
+
+                }
+
+            ]
+
+        }
+
+    ],
+
+
+    junior:[
+
+        {
+
+            title:"二次方程式",
+
+            tutorial:[
+
+                {
+
+                    question:"x + 3 = 7 のとき、xはいくつ？",
+
+                    answer:"4",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "両辺から3を引きます。<br><br>" +
+                            "x + 3 - 3 = 7 - 3<br>" +
+                            "x = 4"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "https://via.placeholder.com/600x350?text=x%2B3%3D7"
+
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/dQw4w9WgXcQ"
+
+                        }
+
+                    ]
+
+                }
+
+            ],
+
+
+            real:[
+
+                {
+
+                    question:"x + 5 = 12 のとき、x = ?",
+
+                    answer:"7",
+
+                    explanation:
+                    "両辺から5を引くとx=7です。"
+
+                }
+
+            ]
+
+        },
+				{
 
             title:"",
 
@@ -1689,24 +1906,20 @@ const data = {
 
             ]
 
-        }
+        },
+				{
 
-    ],
-
-
-    junior:[
-
-        {
-
-            title:"一次方程式",
+            title:"",
 
             tutorial:[
 
                 {
 
-                    question:"x + 3 = 7 のとき、xはいくつ？",
+                    question:"",
 
-                    answer:"4",
+                    answer:"",
+			
+		    questionImage: "",
 
                     explanation:[
 
@@ -1717,9 +1930,7 @@ const data = {
                             type:"text",
 
                             content:
-                            "両辺から3を引きます。<br><br>" +
-                            "x + 3 - 3 = 7 - 3<br>" +
-                            "x = 4"
+                            ""
 
                         },
 
@@ -1730,7 +1941,52 @@ const data = {
                             type:"image",
 
                             src:
-                            "https://via.placeholder.com/600x350?text=x%2B3%3D7"
+                            "img/.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            ""
+                        }
+
+                    ]
+
+                },
+
+
+                {
+
+                    question:"",
+
+                    answer:"",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            ""
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/.png"
 
                         },
 
@@ -1741,7 +1997,7 @@ const data = {
                             type:"video",
 
                             src:
-                            "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            ""
 
                         }
 
@@ -1756,12 +2012,14 @@ const data = {
 
                 {
 
-                    question:"x + 5 = 12 のとき、x = ?",
+                    question:"",
 
-                    answer:"7",
+                    answer:"",
 
                     explanation:
-                    "両辺から5を引くとx=7です。"
+
+                    "",
+                    questionImage: ""
 
                 }
 
