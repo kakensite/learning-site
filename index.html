@@ -335,14 +335,23 @@ button{
 
     max-height:500px;
 
+    width:auto;
+
+    height:auto;
+
+    object-fit:contain;
+
 }
 	
 .explanationImage {
-    width: 90%;
-    max-width: 650px;
-    margin: 10px auto;
-    display: block;
-    border-radius: 10px;
+    width:auto;
+    max-width:90%;
+    max-height:500px;
+    height:auto;
+    margin:10px auto;
+    display:block;
+    border-radius:10px;
+    object-fit:contain;
 }
 
 
@@ -444,6 +453,12 @@ button{
     width:400px;
 
     max-width:90%;
+
+    max-height:80vh;
+
+    overflow-y:auto;
+
+    box-sizing:border-box;
 
 }
 
@@ -1862,7 +1877,7 @@ const data = {
 				},
 				{
 
-                    question:`さいころを２個同時に投げたとき、目の合計が４以下になる確率は？
+                    question:`さいころを２個同時に投げたとき、目の合計が４以下になる確率は？<br><br>
 					選択肢<br>1,&nbsp;1/6&nbsp;&nbsp;&nbsp;2,&nbsp;1/4<br>3,&nbsp;1/12&nbsp;&nbsp;&nbsp;4,&nbsp;1/36`,
 
                     answer:"1",
