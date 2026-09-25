@@ -1420,7 +1420,7 @@ const data = {
 太郎くんは、3しゅるい合わせて 20コ 買ったところ、合計きんがくは 2,000円 でした。<br>
 さらに、りんごのこすうは、みかんのこすうの 2倍 でした。<br>
 さて、太郎くんは、りんご・みかん・バナナを何コずつ買ったでしょう？<br><br>
-選択肢&nbsp;&nbsp;1,りんご4個、みかん2個、バナナ14本&nbsp;&nbsp;2,りんご6個、みかん3個、バナナ11本&nbsp;&nbsp;3,りんご0個、みかん0個、バナナ20本&nbsp;&nbsp;4,りんご8個、みかん4個、バナナ8本`,
+選択肢&nbsp;&nbsp;1,りんご4個、みかん2個、バナナ14本<br>2,りんご6個、みかん3個、バナナ11本<br>3,りんご0個、みかん0個、バナナ20本<br>4,りんご8個、みかん4個、バナナ8本`,
 
                     answer:"3",
 
@@ -1549,7 +1549,7 @@ const data = {
 太郎くんの速さは 毎分80m です。太郎くんが出発してから 10分後、次郎くんがえきを出発して家へ向かいました。<br>
 次郎くんの速さは 毎分100m です。2人はとちゅうで出会い、その後も同じ速さで進みました。<br>
 2人が出会ったのは、午前何時何分でしょう？<br><br>
-選択肢&nbsp;&nbsp;1,8時30分&nbsp;&nbsp;2,9時&nbsp;&nbsp;3,8時45分&nbsp;&nbsp;4,9時10分`,
+選択肢&nbsp;&nbsp;&nbsp;1,8時30分&nbsp;&nbsp;&nbsp;2,9時&nbsp;&nbsp;&nbsp;3,8時45分&nbsp;&nbsp;&nbsp;4,9時10分`,
 
                     answer:"1",
 
@@ -1718,15 +1718,15 @@ const data = {
 
         {
 
-            title:"二次方程式",
+            title:"直角三角形の辺の比",
 
             tutorial:[
 
                 {
 
-                    question:"x + 3 = 7 のとき、xはいくつ？",
+                    question:"５：１２：ｘのｘを求めろ",
 
-                    answer:"4",
+                    answer:"13",
 
                     explanation:[
 
@@ -1737,9 +1737,7 @@ const data = {
                             type:"text",
 
                             content:
-                            "両辺から3を引きます。<br><br>" +
-                            "x + 3 - 3 = 7 - 3<br>" +
-                            "x = 4"
+                            "x>12とすると問題から三角比を扱うとわかる。<br>直角三角形においてa>b>cとするとa²=b²+c²<br>これからx²=5²+12²が成立する。<br>x²=169より答えがわかる。"
 
                         },
 
@@ -1750,7 +1748,7 @@ const data = {
                             type:"image",
 
                             src:
-                            "https://via.placeholder.com/600x350?text=x%2B3%3D7"
+                            "img/中三角関数.png"
 
                         },
 
@@ -1761,7 +1759,7 @@ const data = {
                             type:"video",
 
                             src:
-                            "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            "https://www.youtube.com/embed/_SkEk-u-4Q0?si=qMjbZJuTnEePAEaL"
 
                         }
 
@@ -1776,31 +1774,30 @@ const data = {
 
                 {
 
-                    question:"x + 5 = 12 のとき、x = ?",
+                    question:"60:144:xのxを求めろ。",
 
-                    answer:"7",
+                    answer:"156",
 
                     explanation:
-                    "両辺から5を引くとx=7です。"
+                    "60:144:156は5:12:13を12倍したものなので、<br>13×12で156が答え"
 
                 }
 
             ]
 
         },
-				{
+		
+		{
 
-            title:"",
+            title:"確率",
 
             tutorial:[
 
                 {
 
-                    question:"",
+                    question:"さいころ２つを同時に投げた時目の出方は何通りあるかな？",
 
-                    answer:"",
-			
-		    questionImage: "",
+                    answer:"36",
 
                     explanation:[
 
@@ -1811,7 +1808,7 @@ const data = {
                             type:"text",
 
                             content:
-                            ""
+                            "一つ目のサイコロが1の目を出したとき1~6の六通り。<br>また二の目が出た時も同じく六通り。<br>それを6の目まで考えると6通りが6個よって6×6より答えがでる。<br>またさいころの出目のでかたは6^n通りある。"
 
                         },
 
@@ -1822,7 +1819,7 @@ const data = {
                             type:"image",
 
                             src:
-                            "img/.png"
+                            "img/中さいころ.png"
 							
                         },
 
@@ -1833,53 +1830,7 @@ const data = {
                             type:"video",
 
                             src:
-                            ""
-                        }
-
-                    ]
-
-                },
-
-
-                {
-
-                    question:"",
-
-                    answer:"",
-
-                    explanation:[
-
-                        {
-
-                            title:"文章",
-
-                            type:"text",
-
-                            content:
-                            ""
-
-                        },
-
-                        {
-
-                            title:"画像",
-
-                            type:"image",
-
-                            src:
-                            "img/.png"
-
-                        },
-
-                        {
-
-                            title:"動画",
-
-                            type:"video",
-
-                            src:
-                            ""
-
+                            "https://www.youtube.com/embed/fnbb8C972E4?si=BLgGtaiYiCUkJk3p"
                         }
 
                     ]
@@ -1893,33 +1844,57 @@ const data = {
 
                 {
 
-                    question:"",
+                    question:`さいころを２個同時に投げたとき、さいころの目が２つとも１の確率は？<br><br>
+選択肢&nbsp;&nbsp;&nbsp;1,5/36&nbsp;&nbsp;&nbsp;2,1/6&nbsp;&nbsp;&nbsp;3,1/36&nbsp;&nbsp;&nbsp;4,29/36`,
 
-                    answer:"",
+                    answer:"3",
 
                     explanation:
+                     `さいころ1個で「1」が出る確率は<br>
+1÷6＝1/6です。<br><br>
 
-                    "",
-                    questionImage: ""
+さいころを2個投げて、どちらも「1」になるので、<br>
+1/6×1/6＝1/36<br><br>
+
+答え：1/36`,
+
+				},
+				{
+
+                    question:"さいころを２個同時に投げたとき、目の合計が４以下になる確率",
+
+                    answer:"13",
+
+                    explanation:
+`さいころ2個の目の出方は、全部で<br>
+6×6＝36通りあります。<br><br>
+
+合計が4以下になるのは、<br>
+(1,1)、(1,2)、(1,3)、<br>
+(2,1)、(2,2)、(3,1) の6通りです。<br><br>
+
+したがって、確率は<br>
+6÷36＝1/6<br><br>
+
+答え：1/6`
 
                 }
+
 
             ]
 
         },
 				{
 
-            title:"",
+            title:"二次方程式",
 
             tutorial:[
 
                 {
 
-                    question:"",
+                    question:"(ｘ＋４)(ｘ＋７)＝０を展開しろ<br><br>選択肢&nbsp;&nbsp;1,x²-3x-28<br>2,x²+2x-21<br>3,x²+3x+28<br>4,x²+2x-21",
 
-                    answer:"",
-			
-		    questionImage: "",
+                    answer:"1",
 
                     explanation:[
 
