@@ -17,6 +17,19 @@ content="width=device-width, initial-scale=1.0">
 
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
+<!-- MathJax -->
+<script>
+window.MathJax = {
+    tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']]
+    },
+    chtml: {
+        scale: 0.7
+    }
+};
+</script>
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 <style>
 
@@ -1194,7 +1207,7 @@ const data = {
 
                             content:
                             "()はかけ算と同じくひとまとまりでかんがえるもの。<br><br>" +
-							"よって6*(3+4)では3+4をやって、<br>そのけっかに6をかけたものが答えとなる。"
+							"よって6×(3+4)では3+4をやって、<br>そのけっかに6をかけたものが答えとなる。"
 
                         },
 
@@ -1481,7 +1494,8 @@ const data = {
                             type:"text",
 
                             content:
-                            "びょう速はm/s　分速はm/60sと表される。<br>よって1200/8が答えとなる。"
+                            `秒速は \( \mathrm{m/s} \)、分速は \( \mathrm{m/60s} \) と表される。<br>
+よって \( \frac{1200}{8} \) が答えとなる。`
 
                         },
 
@@ -1613,7 +1627,7 @@ const data = {
                             type:"text",
 
                             content:
-                            "おうぎ形の面積の求め方は「半径×半径×3.14×中心角/360」で求められるため、中心角を代入をして答えとなる。"
+                            `おうぎ形の面積は、\\(半径\\times半径\\times3.14\\times\\frac{中心角}{360}\\) で求められるため、中心角を代入して答えとなる。`
 
                         },
 
@@ -1660,7 +1674,7 @@ const data = {
                             type:"text",
 
                             content:
-                            "(1)-直角二等辺三角形(5*5/2)によって弓状の部分がでる。<br>それを二分の一することにより答えとなる。"
+                            "(1)-直角二等辺三角形(5×5÷2)によって弓状の部分がでる。<br>それを二分の一することにより答えとなる。"
 
                         },
 
@@ -1828,7 +1842,7 @@ const data = {
                             type:"text",
 
                             content:
-                            "一つ目のサイコロが1の目を出したとき1~6の六通り。<br>また二の目が出た時も同じく六通り。<br>それを6の目まで考えると6通りが6個よって6×6より答えがでる。<br>またさいころの出目のでかたは6^n通りある。"
+                            "一つ目のサイコロが1の目を出したとき1~6の六通り。<br>また二の目が出た時も同じく六通り。<br>それを6の目まで考えると6通りが6個よって6×6より答えがでる。<br>また、さいころの出目のでかたは \\(6^n\\) 通りある。"
 
                         },
 
@@ -1865,24 +1879,26 @@ const data = {
                 {
 
                     question:`さいころを２個同時に投げたとき、さいころの目が２つとも１の確率は？<br><br>
-選択肢<br>1,&nbsp;5/36&nbsp;&nbsp;&nbsp;2,&nbsp;1/6<br>3,&nbsp;1/36&nbsp;&nbsp;&nbsp;4,&nbsp;29/36`,
+選択肢<br>1,\\(\\frac{5}{36}\\)&nbsp;&nbsp;&nbsp;2,\\(\\frac{1}{6}\\)<br>
+3,\\(\\frac{1}{36}\\)&nbsp;&nbsp;&nbsp;4,\\(\\frac{29}{36}\\)`,
 
                     answer:"3",
 
                     explanation:
-                     `さいころ1個で「1」が出る確率は<br>
-1÷6＝1/6です。<br><br>
+`さいころ1個で「1」が出る確率は<br>
+1÷6＝\\(\\frac{1}{6}\\)です。<br><br>
 
 さいころを2個投げて、どちらも「1」になるので、<br>
-1/6×1/6＝1/36<br><br>
+\\(\\frac{1}{6}\\times\\frac{1}{6}=\\frac{1}{36}\\)<br><br>
 
-答え：1/36`,
+答え：\\(\\frac{1}{36}\\)`
 
 				},
 				{
 
                     question:`さいころを２個同時に投げたとき、目の合計が４以下になる確率は？<br><br>
-					選択肢<br>1,&nbsp;1/6&nbsp;&nbsp;&nbsp;2,&nbsp;1/4<br>3,&nbsp;1/12&nbsp;&nbsp;&nbsp;4,&nbsp;1/36`,
+選択肢<br>1,&nbsp;\\(\\frac{1}{6}\\)&nbsp;&nbsp;&nbsp;2,&nbsp;\\(\\frac{1}{4}\\)<br>
+3,&nbsp;\\(\\frac{1}{12}\\)&nbsp;&nbsp;&nbsp;4,&nbsp;\\(\\frac{1}{36}\\)`,
 
                     answer:"1",
 
@@ -1895,9 +1911,9 @@ const data = {
 (2,1)、(2,2)、(3,1) の6通りです。<br><br>
 
 したがって、確率は<br>
-6÷36＝1/6<br><br>
+6÷36＝\\(\\frac{1}{6}\\)<br><br>
 
-答え：1/6`
+答え：\\(\\frac{1}{6}\\)`
 
                 }
 
@@ -2009,19 +2025,20 @@ const data = {
 
                 {
 
-                    question:`x²-&nbsp;18x/26&nbsp;+&nbsp;81/676=0の解を答えよ。
-					選択肢<br>1,&nbsp;x=18/26&nbsp;&nbsp;&nbsp;2,&nbsp;x=9/26<br>3,&nbsp;x=-9/26&nbsp;&nbsp;&nbsp;4,&nbsp;x=81/676`,
+                    question:`\\(x^2-\\frac{18x}{26}+\\frac{81}{676}=0\\)の解を答えよ。<br><br>
+選択肢<br>1,&nbsp;\\(x=\\frac{18}{26}\\)&nbsp;&nbsp;&nbsp;2,&nbsp;\\(x=\\frac{9}{26}\\)<br>
+3,&nbsp;\\(x=-\\frac{9}{26}\\)&nbsp;&nbsp;&nbsp;4,&nbsp;\\(x=\\frac{81}{676}\\)`
 
                     answer:"2",
 
                     explanation:
 						`左辺を平方の形にすると、<br>
-(x－9/26)²＝0 となります。<br><br>
+\\((x-\\frac{9}{26})^2=0\\) となります。<br><br>
 したがって、<br>
-x－9/26＝0<br>
+\\(x-\\frac{9}{26}=0\\)<br>
 なので、<br>
-x＝9/26<br><br>
-答え：x＝9/26`,
+\\(x=\\frac{9}{26}\\)<br><br>
+答え：\\(x=\\frac{9}{26}\\)`
 
                 }
 
@@ -2042,8 +2059,9 @@ x＝9/26<br><br>
 
                 {
 
-                    question:`f（t）＝Vot+1/2×at²をtについて微分せよ。<br><br>
-					選択肢<br>1,&nbsp;Vo+1/2​at&nbsp;&nbsp;&nbsp;2,&nbsp;Vo​+at²<br>3,&nbsp;Vo+at&nbsp;&nbsp;&nbsp;4,&nbsp;Vo​+1/2at²`,
+                    question:`\\(f(t)=V_0t+\\frac{1}{2}at^2\\)を\\(t\\)について微分せよ。<br><br>
+選択肢<br>1,&nbsp;\\(V_0+\\frac{1}{2}at\\)&nbsp;&nbsp;&nbsp;2,&nbsp;\\(V_0+at^2\\)<br>
+3,&nbsp;\\(V_0+at\\)&nbsp;&nbsp;&nbsp;4,&nbsp;\\(V_0+\\frac{1}{2}at^2\\)` ,
 
                     answer:"3",
 
@@ -2056,7 +2074,8 @@ x＝9/26<br><br>
                             type:"text",
 
                             content:
-                           "導関数の定義よりf'(x)=nx^(n-1)となるため2/2Vo+2atとなる。<br>それを整理して答えとなる。"
+                           `導関数の定義より \\(f'(x)=nx^{n-1}\\) となるため、\\(\\frac{2}{2}V_0+2at\\) となる。<br>
+それを整理して答えとなる。`
 
 
                         },
@@ -2090,8 +2109,9 @@ x＝9/26<br><br>
 
                 {
 
-                    question:`F(x)= x²-4について積分せよ。<br><br>
-					選択肢<br>1,&nbsp;x³/3-4x+C&nbsp;&nbsp;&nbsp;2,&nbsp;x³/3​−4x<br>3,&nbsp;x³−4x+C&nbsp;&nbsp;&nbsp;4,&nbsp;x³/3​−4+C`,
+                    question:`\\(F(x)=x^2-4\\)について積分せよ。<br><br>
+選択肢<br>1,&nbsp;\\(\\frac{x^3}{3}-4x+C\\)&nbsp;&nbsp;&nbsp;2,&nbsp;\\(\\frac{x^3}{3}-4x\\)<br>
+3,&nbsp;\\(x^3-4x+C\\)&nbsp;&nbsp;&nbsp;4,&nbsp;\\(\\frac{x^3}{3}-4+C\\)`,
 
                     answer:"1",
 
@@ -2104,7 +2124,11 @@ x＝9/26<br><br>
                             type:"text",
 
                             content:
-                           "範囲が与えられていない為不定積分。<br>あとは微分の逆をするだけ。<br>よってx³/3-4xとなる。<br>ただし不定積分であるため積分定数であるCが出てくる。<br>(微分で定数は消えてしまう積分する関数は定数が消えてしまっている状態である)"
+                           `範囲が与えられていないため不定積分。<br>
+あとは微分の逆をするだけ。<br>
+よって \\(\\frac{x^3}{3}-4x\\) となる。<br>
+ただし不定積分であるため、積分定数である \\(C\\) が出てくる。<br>
+（微分で定数は消えてしまう。積分する関数は、定数が消えてしまっている状態である。）`,
 
 
                         },
@@ -2143,23 +2167,24 @@ x＝9/26<br><br>
 
                 {
 
-                    question:`∫(0→π) e^x sinx dx を求めよ。<br><br>
-					選択肢<br>1,&nbsp;(e^π-1)/2&nbsp;&nbsp;&nbsp;2,&nbsp;(e^π+1)/2<br>3,&nbsp;e^π+1&nbsp;&nbsp;&nbsp;4,&nbsp;(e^π-1)/2e`,
+                    question:`\\(\\int_0^\\pi e^x\\sin x\\,dx\\)を求めよ。<br><br>
+選択肢<br>1,&nbsp;\\(\\frac{e^\\pi-1}{2}\\)&nbsp;&nbsp;&nbsp;2,&nbsp;\\(\\frac{e^\\pi+1}{2}\\)<br>
+3,&nbsp;\\(e^\\pi+1\\)&nbsp;&nbsp;&nbsp;4,&nbsp;\\(\\frac{e^\\pi-1}{2e}\\)`,
 
                     answer:"2",
 
                     explanation:
                     `この積分は、部分積分を2回使って計算します。<br><br>
-まず、eˣsinxを積分すると、<br>
-∫eˣsinx dx＝eˣ(sinx－cosx)/2<br>
+まず、\\(e^x\\sin x\\)を積分すると、<br>
+\\(\\int e^x\\sin x\\,dx=\\frac{e^x(\\sin x-\\cos x)}{2}\\)<br>
 となります。<br><br>
-次に、x＝πとx＝0を代入します。<br>
-sinπ＝0、cosπ＝－1、sin0＝0、cos0＝1なので、<br>
-[eˣ(sinx－cosx)/2]₀^π<br>
-＝e^π/2＋1/2<br>
-＝(e^π＋1)/2<br><br>
+次に、\\(x=\\pi\\)と\\(x=0\\)を代入します。<br>
+\\(\\sin\\pi=0\\)、\\(\\cos\\pi=-1\\)、\\(\\sin0=0\\)、\\(\\cos0=1\\)なので、<br>
+\\(\\left[\\frac{e^x(\\sin x-\\cos x)}{2}\\right]_0^\\pi\\)<br>
+\\(=\\frac{e^\\pi}{2}+\\frac{1}{2}\\)<br>
+\\(=\\frac{e^\\pi+1}{2}\\)<br><br>
 したがって、答えは<br>
-(e^π＋1)/2 です。`
+\\(\\frac{e^\\pi+1}{2}\\)です。`
 
                 }
 
@@ -2172,56 +2197,11 @@ sinπ＝0、cosπ＝－1、sin0＝0、cos0＝1なので、<br>
 
             tutorial:[
 
-                {
+				{
 
-                    question:`z=cos4/9π＋isin4/9π、ｚ³を数字で表せ。<br><br>
-					選択肢<br>1,&nbsp;－1/2＋√3/2i&nbsp;&nbsp;&nbsp;2,&nbsp;1/2－√3/2i<br>3,&nbsp;1/2＋√3/2i`&nbsp;&nbsp;&nbsp;4,&nbsp;－1/2－√3/2i`,
-
-                    answer:"4",
-
-                    explanation:[
-
-                        {
-
-                            title:"文章",
-
-                            type:"text",
-
-                            content:
-                            "ド・モアブルの定理からn乗は角度のn倍すればよい。<br>よって角度は4/3πとなる。それをsin,cosから数字で表せばよい。<br>(π=180°とし考えていくのが弧度法)
-"
-
-                        },
-
-                        {
-
-                            title:"画像",
-
-                            type:"image",
-
-                            src:
-                            "img/高校複素数１.png"
-							
-                        },
-
-                        {
-
-                            title:"動画",
-
-                            type:"video",
-
-                            src:
-                            "https://www.youtube.com/embed/bV3NU1Rixgo?si=aZZ_KvEknSwiTNaA"
-                        }
-
-                    ]
-
-                },
-
-
-                {
-
-                    question:"Z1=(cos7/8π+isin7/8π) ，Z2=r(cos5/8π+isin5/8π) として、Z1×Z2を求めよ。<br><br>選択肢<br>1,&nbsp;－r&nbsp;&nbsp;&nbsp;2,&nbsp;－ri<br>3,&nbsp;r&nbsp;&nbsp;&nbsp;4,&nbsp;ri",
+                    question:`\\(Z_1=(\\cos\\frac{7\\pi}{8}+i\\sin\\frac{7\\pi}{8})\\)、\\(Z_2=r(\\cos\\frac{5\\pi}{8}+i\\sin\\frac{5\\pi}{8})\\)として、\\(Z_1\\times Z_2\\)を求めよ。<br><br>
+選択肢<br>1,&nbsp;\\(-r\\)&nbsp;&nbsp;&nbsp;2,&nbsp;\\(-ri\\)<br>
+3,&nbsp;\\(r\\)&nbsp;&nbsp;&nbsp;4,&nbsp;\\(ri\\)` ,
 
                     answer:"2",
 
@@ -2234,7 +2214,9 @@ sinπ＝0、cosπ＝－1、sin0＝0、cos0＝1なので、<br>
                             type:"text",
 
                             content:
-                            "z1*z2のsincos部分はlogの計算と同じく角度を足せばよい<br>よって角度は12/8πとなる。それをsin,cosから数字で表せばよい。<br>(π=180°とし考えていくのが弧度法)"
+                            `\\(z_1\\times z_2\\)のsin、cos部分はlogの計算と同じく角度を足せばよい。<br>
+よって角度は\\(\\frac{12\\pi}{8}\\)となる。それをsin、cosから数字で表せばよい。<br>
+（\\(\\pi=180°\\)とし考えていくのが弧度法）`,
 
                         },
 
@@ -2256,7 +2238,190 @@ sinπ＝0、cosπ＝－1、sin0＝0、cos0＝1なので、<br>
                             type:"video",
 
                             src:
-                            "https://www.youtube.com/embed/Q3rpfLi6xW8?si=TlFYYvkURQz-EB2d"
+                            "https://www.youtube.com/embed/bV3NU1Rixgo?si=awMoqfIdWVdDkpKm"
+
+                        }
+
+                    ]
+
+                },
+
+                {
+
+                    question:`z=\\cos\\frac{4}{9}\\pi+i\\sin\\frac{4}{9}\\pi、z³を数字で表せ。<br><br>
+選択肢<br>1,&nbsp;-\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i&nbsp;&nbsp;&nbsp;2,&nbsp;\\frac{1}{2}-\\frac{\\sqrt{3}}{2}i<br>
+3,&nbsp;\\frac{1}{2}+\\frac{\\sqrt{3}}{2}i&nbsp;&nbsp;&nbsp;4,&nbsp;-\\frac{1}{2}-\\frac{\\sqrt{3}}{2}i`,
+
+                    answer:"4",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                           `ド・モアブルの定理から$n$乗は角度の$n$倍すればよい。<br>
+よって角度は\\frac{4}{3}\\piとなる。それをsin,cosから数字で表せばよい。<br>
+(\\pi=180°とし考えていくのが弧度法)`,
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校複素数１.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/Q3rpfLi6xW8?si=Pm-LzOtM0TjaOmbO"
+                        }
+
+                    ]
+
+                }
+
+            ],
+
+
+            real:[
+
+                {
+
+                    question:`a_1=1、a_2=i、a_{n+2}=a_{n+1}+a_n（n=1,2,・・・）<br>
+b_n=\\frac{a_{n+1}}{a_n}<br><br>
+iは虚数単位とする。<br>
+b_1、b_2、b_3を通る円の中心と半径を求めよ。<br>
+選択肢<br>
+1,&nbsp;中心(1/2,0)、半径\\frac{\\sqrt{5}}{2}&nbsp;&nbsp;&nbsp;
+2,&nbsp;中心(1/2,1/2)、半径\\frac{\\sqrt{5}}{2}<br>
+3,&nbsp;中心(0,1/2)、半径\\frac{\\sqrt{5}}{2}&nbsp;&nbsp;&nbsp;
+4,&nbsp;中心(1,0)、半径\\frac{\\sqrt{5}}{2}`,
+
+                    answer:"1",
+
+                    explanation:
+
+                   `まず、漸化式からa_3、a_4を求めます。<br><br>
+a_3＝a_2＋a_1＝i＋1<br>
+a_4＝a_3＋a_2＝1＋2i<br><br>
+したがって、<br>
+b_1＝\\frac{a_2}{a_1}＝i<br>
+b_2＝\\frac{a_3}{a_2}＝\\frac{1＋i}{i}＝1－i<br>
+b_3＝\\frac{a_4}{a_3}＝\\frac{1＋2i}{1＋i}＝\\frac{3＋i}{2}<br><br>
+複素数平面上で、これらを点として考えると、<br>
+b_1＝(0,1)、b_2＝(1,－1)、b_3＝(\\frac{3}{2},\\frac{1}{2})<br>
+となります。<br><br>
+この3点を通る円を求めると、中心は(1/2,0)、半径は\\frac{\\sqrt{5}}{2}となります。<br><br>
+したがって、答えは<br>
+中心(1/2,0)、半径\\frac{\\sqrt{5}}{2} です。`,
+
+                }
+
+            ]
+
+        },
+		{
+
+            title:"ベクトル",
+
+            tutorial:[
+
+                {
+
+                    question:`|\\vec{a}|=2、|\\vec{b}|=5で、\\vec{a}と\\vec{b}のなす角が60°のとき、内積\\vec{a}\\cdot\\vec{b}を求めよ。`,
+                    answer:"5",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "ベクトルの内積の計算方法で|a|×|b|cosθ=a・bであるため、2×5×cos60°より答えとなる。"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校ベクトル１.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/T02FBbRi0TM?si=p53K9SbrKN1i0ZSu"
+                        }
+
+                    ]
+
+                },
+
+
+                {
+
+                    question:"a(8,2),b(5,3)のときの内積を求めよ。",
+
+                    answer:"46",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "もう一つの内積の求め方としてa(a₁,a),b(b₁,b)とすると<br>a・b=a₁×b₁+a₂×b₂なのでba・b=8×5+2×3<br>より答えとなる。"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校ベクトル２.png"
+
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/L-2c781PRj4?si=JpkasPrbkaFi6FiM"
 
                         }
 
@@ -2271,14 +2436,311 @@ sinπ＝0、cosπ＝－1、sin0＝0、cos0＝1なので、<br>
 
                 {
 
-                    question:"",
+                    question:`|\\vec{a}|=2, |\\vec{b}|=5で、\\vec{a}と\\vec{b}のなす角が60°のとき、|\\vec{a}+\\vec{b}|と|\\vec{a}-\\vec{b}|を求めよ。<br><br>
+選択肢<br>1,&nbsp;|\\vec{a}+\\vec{b}|=\\sqrt{39}, |\\vec{a}-\\vec{b}|=\\sqrt{19}&nbsp;&nbsp;&nbsp;2,&nbsp;|\\vec{a}+\\vec{b}|=\\sqrt{29}, |\\vec{a}-\\vec{b}|=\\sqrt{9}<br>
+3,&nbsp;|\\vec{a}+\\vec{b}|=\\sqrt{49}, |\\vec{a}-\\vec{b}|=\\sqrt{9}&nbsp;&nbsp;&nbsp;4,&nbsp;|\\vec{a}+\\vec{b}|=\\sqrt{19}, |\\vec{a}-\\vec{b}|=\\sqrt{39}`,
 
-                    answer:"",
+                    answer:"1",
+
+                    explanation:
+                    `ベクトルの公式<br>
+|\\vec{a}+\\vec{b}|^2=|\\vec{a}|^2+|\\vec{b}|^2+2|\\vec{a}||\\vec{b}|\\cos60°<br><br>
+|\\vec{a}+\\vec{b}|^2=2^2+5^2+2×2×5×\\frac{1}{2}<br>
+=39<br>
+よって、|\\vec{a}+\\vec{b}|=\\sqrt{39}<br><br>
+同じように、<br>
+|\\vec{a}-\\vec{b}|^2=2^2+5^2-2×2×5×\\frac{1}{2}<br>
+=19<br>
+よって、|\\vec{a}-\\vec{b}|=\\sqrt{19}<br><br>
+したがって、<br>
+|\\vec{a}+\\vec{b}|=\\sqrt{39}、|\\vec{a}-\\vec{b}|=\\sqrt{19}`,
+
+                }
+
+            ]
+
+        },		
+
+		{
+
+            title:"図形と方程式",
+
+            tutorial:[
+
+                {
+
+                    question:`a(2,5),b(-5,-2)を結ぶ線分の垂直二等分線の方程式を求めよ。<br><br>
+	選択肢<br>1,&nbsp;y=-x+3&nbsp;&nbsp;&nbsp;2,&nbsp;y=x<br>3,&nbsp;y=x+3&nbsp;&nbsp;&nbsp;4,&nbsp;y=-x`,
+
+                    answer:"4",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            `まずabの式を作る。ある一線と垂直な線の関係は、線の係数どうしをかけたとき-1となる。<br>
+y-5=\\frac{-(2+5)}{-(5+2)}(x-2)<br>
+y=x+3よりm=1。係数どうしの関係から垂直な線のxの係数は-1。<br>
+y-Y_m=-(x-X_m)。中点を求める。<br>
+X_m=\\frac{2-5}{2},Y_m=\\frac{5-2}{2}<br>
+よってy-\\frac{3}{2}=-(x+\\frac{3}{2})より答えとなる。`
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校図形と方程式１.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/Bxxiei3iNF4?si=g7qkFRX_MqYnbue2"
+                        }
+
+                    ]
+
+                },
+
+
+                {
+
+                    question:`次の円と直線は共有点をもつ。その座標を求めよ。<br>x²+y²=25、y=2x+5<br><br>
+	選択肢<br>1,&nbsp;(0,5),(-4,-3)&nbsp;&nbsp;&nbsp;2,&nbsp;(0,-5),(-4,3)<br>3,&nbsp;(5,0),(-3,-4)&nbsp;&nbsp;&nbsp;4,&nbsp;(0,5),(4,3)`,
+
+                    answer:"1",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            `x²+(2x+5)²=25と問題文から読むことができる<br>整理すると5x²+20x=0となる<br>よってx=0,-4  y=5,-3となる。`
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校図形と方程式２.png"
+
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/U6sA-WfWL-I?si=VeevHn2l9d9RcxX2"
+
+                        }
+
+                    ]
+
+                }
+
+            ],
+
+
+            real:[
+
+                {
+
+                    question:`C：y=x²上の点P(t,t²)（ただしt>0）における法線をlとする。<br>
+法線lと放物線Cの、点P以外の共通点をQとする。<br>
+点PがC上を動くとき、点Qの軌跡を求めよ。<br><br>
+選択肢<br>1,&nbsp;y=x²+1&nbsp;&nbsp;&nbsp;（x≤-√2）&nbsp;&nbsp;&nbsp;2,&nbsp;y=x²&nbsp;&nbsp;&nbsp;（x≤-√2）<br>3,&nbsp;y=x²&nbsp;&nbsp;&nbsp;（x≥√2）&nbsp;&nbsp;&nbsp;4,&nbsp;y=x²+1&nbsp;&nbsp;&nbsp;（x≥√2）`,
+
+                    answer:"2",
 
                     explanation:
 
-                    "",
-                    questionImage: ""
+                    `点P(t,t^2)での接線の傾きは2tなので、法線の傾きは-\\frac{1}{2t}。<br>
+したがって法線lは<br>
+y-t^2=-\\frac{1}{2t}(x-t)<br><br>
+Qは放物線C上にあるので、y=x^2を代入すると、<br>
+2tx^2+x-2t^3-t=0<br>
+(x-t)(2tx+2t^2+1)=0<br><br>
+x=tはPの座標なので、Qでは<br>
+x=-t-\\frac{1}{2t}<br>
+t>0より、t+\\frac{1}{2t}\\geq\\sqrt{2}なので、x\\leq-\\sqrt{2}。<br>
+またQはC上にあるからy=x^2。<br><br>
+よって、Qの軌跡は<br>
+<strong>y=x^2（x\\leq-\\sqrt{2}）</strong>`,
+
+                }
+
+            ]
+
+        },
+				{
+
+            title:"数列と漸化式",
+
+            tutorial:[
+
+                {
+
+                    question:`1・2+2・2^2+3・2^3+・・・+n・2^n　の和を求めよ。<br><br>
+選択肢<br>
+1,&nbsp;(n-1)2^n+2&nbsp;&nbsp;&nbsp;2,&nbsp;(n+1)2^n-2<br>
+3,&nbsp;(n-1)2^{n+1}+2&nbsp;&nbsp;&nbsp;4,&nbsp;n2^{n+1}-2`,
+
+                    answer:"3",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            "S=与式とし乗数の下の数をかける。<br>今回の問題では2Sとなる2S-S=2与式-与式より求められる。"
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校数列１.png"
+							
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/2h-f7LQ-rpo?si=601keN1Ev5eq-X0O"
+                        }
+
+                    ]
+
+                },
+
+
+                {
+
+                    question:`a(1)=1,a(n+1)=2a(n)+1のa(n)を求めよ。<br><br>
+選択肢<br>
+1,&nbsp;2^n+1&nbsp;&nbsp;&nbsp;2,&nbsp;2^{n-1}-1<br>
+3,&nbsp;2^n-1&nbsp;&nbsp;&nbsp;4,&nbsp;2^{n+1}-1`,
+
+                    answer:"3",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                            `漸化式ではa(n+1)+p=q[a(n)+p]となるようにするのがセオリー<br>今回の問題では
+a(n+1)+1=2[a(n)+1] b(n)=a(n)+1とすると、b(n+1)=2b(n)と表される。<br>
+よりb(n)=b(1)2^(n-1)となるb(1)=a(1)+1=2よってb(n)=2^nとなる。<br>
+2^n=a(n)+1からa(n)の式が出る。`
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校数列２.png"
+
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/mrSU0d_ps7Y?si=h1sx1wq1s4vAmCle"
+
+                        }
+
+                    ]
+
+                }
+
+            ],
+
+
+            real:[
+
+                {
+
+                    question:`a(1)=1,a(2)=3<br>
+a(n+2)=4a(n+1)-3a(n)のa(n)を求めよ。<br><br>
+
+ヒント<br>
+1,&nbsp;a_n=r^n<br>
+2,&nbsp;a_n=Ar_1^n+Br_2^n<br><br>
+
+選択肢<br>
+1,&nbsp;3^n&nbsp;&nbsp;&nbsp;2,&nbsp;3^{n-1}<br>
+3,&nbsp;3^{n+1}&nbsp;&nbsp;&nbsp;4,&nbsp;2・3^{n-1}`,
+
+                    answer:"2",
+
+                    explanation:
+
+                    `a(n)=r^nとおくと、<br>
+r^{n+2}=4r^{n+1}-3r^n<br>
+より、r^2-4r+3=0。<br>
+(r-1)(r-3)=0なので、r=1,3。<br><br>
+
+よって、<br>
+a(n)=A+B\\times3^n<br>
+とおける。<br><br>
+
+a(1)=1、a(2)=3を代入すると、<br>
+A+3B=1<br>
+A+9B=3<br>
+これを解くと、A=0、B=\\frac{1}{3}。<br><br>
+
+したがって、<br>
+<strong>a(n)=\\frac{3^n}{3}=3^{n-1}</strong>`,
 
                 }
 
@@ -2512,8 +2974,11 @@ tutorialQuestion.innerHTML = "";
 const questionText =
     document.createElement("div");
 
-questionText.innerHTML =
-    q.question;
+questionText.innerHTML = q.question;
+
+if (window.MathJax) {
+    MathJax.typesetPromise([questionText]);
+}
 
 tutorialQuestion.appendChild(questionText);
 
@@ -2741,6 +3206,9 @@ function checkTutorial(){
     </p>
     `;
 
+	if (window.MathJax) {
+    MathJax.typesetPromise([explanation]);
+}
 
     document
     .getElementById("tutorialJudgeModal")
@@ -2833,10 +3301,14 @@ function openExplanation(explanation){
 
     if(explanation.type === "text"){
 
-        content.innerHTML =
-        `<p>${explanation.content}</p>`;
+    content.innerHTML =
+    `<p>${explanation.content}</p>`;
 
+    if (window.MathJax) {
+        MathJax.typesetPromise([content]);
     }
+
+}
 
     else if(explanation.type === "image"){
 
@@ -2940,8 +3412,11 @@ realQuestion.innerHTML = "";
 const questionText =
     document.createElement("div");
 
-questionText.innerHTML =
-    q.question;
+questionText.innerHTML = q.question;
+
+if (window.MathJax) {
+    MathJax.typesetPromise([questionText]);
+}
 
 realQuestion.appendChild(questionText);
 
@@ -3136,6 +3611,10 @@ function checkReal(){
         ${q.explanation || ""}
     </p>
     `;
+
+	if (window.MathJax) {
+    MathJax.typesetPromise([explanation]);
+}
 
 
     document
