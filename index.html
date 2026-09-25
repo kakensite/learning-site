@@ -323,6 +323,10 @@ button{
     box-sizing:border-box;
 
     overflow:auto;
+	
+	font-size:22px;
+	
+	line-height:1.8;
 
 }
 
@@ -617,7 +621,7 @@ button{
 <div id="gradeScreen"
      class="screen">
 
-    <h1>学年を選択</h1>
+    <h1>算数＆数学学習アプリ<br>学年を選択</h1>
 
 
     <button
@@ -2005,7 +2009,7 @@ const data = {
 
                 {
 
-                    question:`x²-&nbsp;&nbsp;18x/26&nbsp;&nbsp;+&nbsp;&nbsp;81/676=0の解を答えよ。
+                    question:`x²-&nbsp;18x/26&nbsp;+&nbsp;81/676=0の解を答えよ。
 					選択肢<br>1,&nbsp;x=18/26&nbsp;&nbsp;&nbsp;2,&nbsp;x=9/26<br>3,&nbsp;x=-9/26&nbsp;&nbsp;&nbsp;4,&nbsp;x=81/676`,
 
                     answer:"2",
@@ -2032,15 +2036,16 @@ x＝9/26<br><br>
 
         {
 
-            title:"二次方程式",
+            title:"微積",
 
             tutorial:[
 
                 {
 
-                    question:"x² - 5x + 6 = 0 を考えよう。小さい方の解は？",
+                    question:`f（t）＝Vot+1/2×at²をtについて微分せよ。
+					選択肢<br>1,&nbsp;Vo+1/2​at&nbsp;&nbsp;&nbsp;2,&nbsp;Vo​+at²<br>3,&nbsp;Vo+at&nbsp;&nbsp;&nbsp;4,&nbsp;Vo​+1/2at²`,
 
-                    answer:"2",
+                    answer:"3",
 
                     explanation:[
 
@@ -2051,9 +2056,8 @@ x＝9/26<br><br>
                             type:"text",
 
                             content:
-                            "因数分解すると<br><br>" +
-                            "(x - 2)(x - 3) = 0<br><br>" +
-                            "したがって x=2 または x=3 です。"
+                           "導関数の定義よりf'(x)=nx^(n-1)となるため2/2Vo+2atとなる。<br>それを整理して答えとなる。"
+
 
                         },
 
@@ -2064,7 +2068,7 @@ x＝9/26<br><br>
                             type:"image",
 
                             src:
-                            "https://via.placeholder.com/600x350?text=x%C2%B2-5x%2B6%3D0"
+                            "img/高校微積１.png"
 
                         },
 
@@ -2075,13 +2079,62 @@ x＝9/26<br><br>
                             type:"video",
 
                             src:
-                            "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            "https://www.youtube.com/embed/AAhhAA6W2AE?si=eMG-JCojq8rUfdn0"
+
+                        }
+
+                    ]
+
+                },
+
+
+                {
+
+                    question:`F(x)= x²-4について積分せよ。
+					選択肢<br>1,&nbsp;x³/3-4x+C&nbsp;&nbsp;&nbsp;2,&nbsp;x³/3​−4x<br>3,&nbsp;x³−4x+C&nbsp;&nbsp;&nbsp;4,&nbsp;x³/3​−4+C`,
+
+                    answer:"1",
+
+                    explanation:[
+
+                        {
+
+                            title:"文章",
+
+                            type:"text",
+
+                            content:
+                           "範囲が与えられていない為不定積分。<br>あとは微分の逆をするだけ。<br>よって(x^3)/3-4xとなる。<br>ただし不定積分であるため積分定数であるCが出てくる。<br>(微分で定数は消えてしまう積分する関数は定数が消えてしまっている状態である)"
+
+
+                        },
+
+                        {
+
+                            title:"画像",
+
+                            type:"image",
+
+                            src:
+                            "img/高校微積２.png"
+
+                        },
+
+                        {
+
+                            title:"動画",
+
+                            type:"video",
+
+                            src:
+                            "https://www.youtube.com/embed/pWvfvJM-T3o?si=u7sSPDBaSyvvpwdM"
 
                         }
 
                     ]
 
                 }
+
 
             ],
 
@@ -2090,12 +2143,23 @@ x＝9/26<br><br>
 
                 {
 
-                    question:"x² - 7x + 12 = 0 の解の小さい方は？",
+                    question:`∫(0→π) e^x sinx dx を求めよ。
+					選択肢<br>1,&nbsp;(e^π-1)/2&nbsp;&nbsp;&nbsp;2,&nbsp;(e^π+1)/2<br>3,&nbsp;e^π+1&nbsp;&nbsp;&nbsp;4,&nbsp;(e^π-1)/2e`,
 
-                    answer:"3",
+                    answer:"2",
 
                     explanation:
-                    "(x-3)(x-4)=0なので、解は3と4です。"
+                    `この積分は、部分積分を2回使って計算します。<br><br>
+まず、eˣsinxを積分すると、<br>
+∫eˣsinx dx＝eˣ(sinx－cosx)/2<br>
+となります。<br><br>
+次に、x＝πとx＝0を代入します。<br>
+sinπ＝0、cosπ＝－1、sin0＝0、cos0＝1なので、<br>
+[eˣ(sinx－cosx)/2]₀^π<br>
+＝e^π/2＋1/2<br>
+＝(e^π＋1)/2<br><br>
+したがって、答えは<br>
+(e^π＋1)/2 です。`
 
                 }
 
